@@ -40,6 +40,6 @@ const appendUser = (name: string, age: number): Promise<IUser> =>
 
 export const registerUser: (name: string, age: number) => Promise<IUser> =
   async (name, age) => {
-    const appendedUser = appendUser(name, age);
+    const appendedUser = await appendUser(name, age);
     return appendedUser;
   };
